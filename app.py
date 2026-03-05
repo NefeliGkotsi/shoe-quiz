@@ -26,8 +26,8 @@ div.stButton > button:hover { background-color: #1F2A44; }
 </style>
 """, unsafe_allow_html=True)
 
-st.title("Ερωτηματολόγιο: Let Massimo Dutti choose your shoe for the day")
-st.caption("Απάντησε 6 ερωτήσεις και δες την καλύτερη πρόταση (Massimo Dutti) με φωτογραφία.")
+st.title("Let Massimo Dutti choose your shoe for the day")
+st.caption("Απαντήστεε 6 ερωτήσεις και δείτε την καλύτερη πρόταση (Massimo Dutti) με φωτογραφία.")
 st.divider()
 
 # --- Αποτελέσματα (στα ελληνικά) ---
@@ -116,7 +116,7 @@ def step_radio(step_key, title, question, options, score_map, horizontal=False):
 step_radio(
     "style",
     "1) Ύφος",
-    "Διάλεξε αυτό που σε εκφράζει περισσότερο:",
+    "Διαλέξτε αυτό που σας εκφράζει περισσότερο:",
     ["Casual", "Smart casual", "Formal", "Outdoor", "Sport"],
     {
         "Casual": {"Minimal Sneaker": 3, "Smart Casual": 1},
@@ -131,7 +131,7 @@ step_radio(
 step_radio(
     "use",
     "2) Χρήση",
-    "Πού θα το φοράς πιο συχνά;",
+    "Πού θα το φοράτε πιο συχνά;",
     ["Καθημερινά", "Δουλειά/γραφείο", "Εκδηλώσεις", "Ταξίδια/περπάτημα", "Γυμναστική"],
     {
         "Καθημερινά": {"Minimal Sneaker": 3, "Smart Casual": 1},
@@ -174,7 +174,7 @@ step_radio(
 step_radio(
     "material",
     "5) Υλικό",
-    "Τι υλικό προτιμάς;",
+    "Τι υλικό προτιμάτε;",
     ["Δέρμα", "Σουέντ", "Ύφασμα/canvas", "Mesh/συνθετικό", "Αδιάβροχο"],
     {
         "Δέρμα": {"Smart Casual": 2, "Formal": 2},
@@ -188,7 +188,7 @@ step_radio(
 step_radio(
     "shape",
     "6) Γραμμή",
-    "Τι γραμμή θες;",
+    "Τι γραμμή θέλετε;",
     ["Slim/minimal", "Κλασική", "Chunky", "Rugged/μποτάκι", "Αθλητική"],
     {
         "Slim/minimal": {"Minimal Sneaker": 3, "Formal": 1},
@@ -204,7 +204,7 @@ st.divider()
 
 all_done = all(k in st.session_state.answers for k in ["style", "use", "priority", "colors", "material", "shape"])
 
-if st.button("✅ Δες το αποτέλεσμα", disabled=not all_done):
+if st.button("✅ Δείτε το αποτέλεσμα", disabled=not all_done):
     st.session_state.submitted = True
 
 if st.session_state.submitted and all_done:
