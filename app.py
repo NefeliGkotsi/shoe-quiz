@@ -43,7 +43,7 @@ RESULTS = {
         "brand": "Massimo Dutti",
         "model": "Δερμάτινο Minimal Sneaker",
         "price": "79.95€",
-        "desc": "Minimal sneaker για καθημερινό στυλ, εύκολο να συνδυαστεί."
+        "desc": "Minimal sneaker για καθημερινό στυλ, εύκολο να συνδυαστεί.",
         "link": "https://www.massimodutti.com/gr/contrast-trainers-l11303750?pelement=56778565"
     },
     "Smart Casual": {
@@ -51,7 +51,7 @@ RESULTS = {
         "brand": "Massimo Dutti",
         "model": "Smart Casual Μπαλαρίνα",
         "price": "79.95€",
-        "desc": "Προσεγμένο παπούτσι για δουλειά/έξοδο, ισορροπία άνεσης και κομψότητας."
+        "desc": "Προσεγμένο παπούτσι για δουλειά/έξοδο, ισορροπία άνεσης και κομψότητας.",
         "link": "https://www.massimodutti.com/gr/crackled-leather-ballet-flats-l11555650?pelement=56839111"
     },
     "Formal": {
@@ -59,7 +59,7 @@ RESULTS = {
         "brand": "Massimo Dutti",
         "model": "Formal Δερμάτινο Τακούνι",
         "price": "89.95€",
-        "desc": "Κλασική γραμμή για πιο επίσημες περιστάσεις."
+        "desc": "Κλασική γραμμή για πιο επίσημες περιστάσεις.",
         "link": "https://www.massimodutti.com/gr/highheel-slingback-shoes-l11404750?pelement=56717461"
     },
 
@@ -68,7 +68,7 @@ RESULTS = {
         "brand": "Massimo Dutti",
         "model": "Suede Μοκασίνι",
         "price": "89.95€",
-        "desc": "Ανθεκτικό και σταθερό, χαρίζει άνεση και κομψότητα."
+        "desc": "Ανθεκτικό και σταθερό, χαρίζει άνεση και κομψότητα.",
         "link": "https://www.massimodutti.com/gr/split-leather-loafers-with-gathered-bow-l11543650?pelement=57441691"
     },
     "Sport": {
@@ -76,7 +76,7 @@ RESULTS = {
         "brand": "Massimo Dutti",
         "model": "Αθλητικό Sneaker",
         "price": "89.95€",
-        "desc": "Άνετο sneaker για καθημερινή δραστηριότητα."
+        "desc": "Άνετο sneaker για καθημερινή δραστηριότητα.",
         "link": "https://www.massimodutti.com/gr/contrast-leather-trainers-l11300750?pelement=56717435"
     },
 }
