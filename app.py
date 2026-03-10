@@ -33,7 +33,7 @@ div.stButton > button:hover { background-color: #1F2A44; }
 # ---------- Brand header (χωρίς logo για να μην έχεις errors) ----------
 st.markdown("## Massimo Dutti")
 st.title("Let Massimo Dutti pick your shoes for the day")
-st.caption("Απαντήστε σε 6 ερωτήσεις και δείτε premium πρόταση + Top-3 εναλλακτικές.")
+st.caption("Απαντήστε σε 6 ερωτήσεις και δείτε premium πρόταση.")
 st.divider()
 
 # ---------- RESULTS (βάλε εδώ τα ελληνικά σου) ----------
