@@ -46,7 +46,7 @@ div.stButton > button:hover {
 # -----------------------------
 st.markdown("## Massimo Dutti")
 st.title("Let Massimo Dutti pick your Shoe for the day")
-st.caption("Απαντήστε σε 6 βήματα και δείτε το παπούτσι που σας ταιριάζει περισσότερο.")
+st.caption("Απαντήστε σε 6 ερωτήματα και δείτε το παπούτσι που σας ταιριάζει περισσότερο.")
 st.divider()
 
 # -----------------------------
@@ -118,13 +118,13 @@ USE_MAP = {
     "Γυμναστική": {"Sport": 4},
 }
 
-PRIORITY_OPTIONS = ["Άνεση", "Στυλ", "Αντοχή", "Ελαφρύ", "Κλασικότητα"]
+PRIORITY_OPTIONS = ["Η άνεση", "Το στυλ", "Η αντοχή", "Η ελαφρότητα", "Η κομψότητα"]
 PRIORITY_MAP = {
-    "Άνεση": {"Minimal Sneaker": 2, "Sport": 2},
-    "Στυλ": {"Smart Casual": 3, "Formal": 2},
-    "Αντοχή": {"Outdoor": 4},
-    "Ελαφρύ": {"Sport": 3, "Minimal Sneaker": 2},
-    "Κλασικότητα": {"Formal": 3, "Smart Casual": 2},
+    "Η άνεση": {"Minimal Sneaker": 2, "Sport": 2},
+    "Το στυλ": {"Smart Casual": 3, "Formal": 2},
+    "Η αντοχή": {"Outdoor": 4},
+    "Η ελαφρότητα": {"Sport": 3, "Minimal Sneaker": 2},
+    "Η κομψότητα": {"Formal": 3, "Smart Casual": 2},
 }
 
 COLORS_OPTIONS = ["Ουδέτερα", "Σκούρα", "Γήινα", "Έντονα", "Μονόχρωμο"]
@@ -279,7 +279,7 @@ if not st.session_state.submitted:
         step_ui(
             "priority",
             "3) Προτεραιότητα",
-            "Τι μετράει περισσότερο;",
+            "Επιλέξτε το πιο σημαντικό για εσάς.",
             PRIORITY_OPTIONS,
             PRIORITY_MAP,
             horizontal=True
