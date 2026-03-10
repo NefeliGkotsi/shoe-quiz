@@ -193,8 +193,12 @@ def step_ui(step_num, key, title, question, options, score_map, horizontal=False
     prev = st.session_state.answers.get(key, {}).get("choice", None)
     idx = options.index(prev) if prev in options else None
     choice = st.radio(question, options, index=idx, horizontal=horizontal, key=f"ui_{key}")
+
     if choice in score_map:
-    st.session_state.answers[key] = {"choice": choice, "scores": score_map[choice]}
+        st.session_state.answers[key] = {
+            "choice": choice,
+            "scores": score_map[choice]
+        }
 
 if not st.session_state.submitted:
     if st.session_state.step == 1:
