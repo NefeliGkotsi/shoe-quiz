@@ -136,21 +136,21 @@ COLORS_MAP = {
     "Μονόχρωμο": {"Formal": 2, "Minimal Sneaker": 2},
 }
 
-MATERIAL_OPTIONS = ["Δέρμα", "Σουέντ", "Ύφασμα/canvas", "Mesh/συνθετικό", "Αδιάβροχο"]
+MATERIAL_OPTIONS = ["Δέρμα", "Σουέντ", "Ύφασμα/canvas", "Mixed", "Αδιάβροχο"]
 MATERIAL_MAP = {
     "Δέρμα": {"Smart Casual": 2, "Formal": 2},
     "Σουέντ": {"Smart Casual": 3},
     "Ύφασμα/canvas": {"Minimal Sneaker": 3, "Sport": 1},
-    "Mesh/συνθετικό": {"Sport": 3, "Minimal Sneaker": 1},
+    "Mixed": {"Sport": 3, "Minimal Sneaker": 1},
     "Αδιάβροχο": {"Outdoor": 4},
 }
 
-SHAPE_OPTIONS = ["Slim/minimal", "Κλασική", "Chunky", "Rugged/μποτάκι", "Αθλητική"]
+SHAPE_OPTIONS = ["Slim/minimal", "Κλασική", "Chunky", "Κομψή", "Αθλητική"]
 SHAPE_MAP = {
     "Slim/minimal": {"Minimal Sneaker": 3, "Formal": 1},
-    "Κλασική": {"Smart Casual": 2, "Formal": 2},
+    "Κλασική": {"Smart Casual": 2, "Outdoor": 4},
     "Chunky": {"Sport": 2, "Minimal Sneaker": 1},
-    "Rugged/μποτάκι": {"Outdoor": 4},
+    "Κομψή": {"Outdoor": 4},
     "Αθλητική": {"Sport": 4},
 }
 
