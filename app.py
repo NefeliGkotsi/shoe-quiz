@@ -241,6 +241,13 @@ if not st.session_state.submitted:
         st.error(f"Δεν έχουν απαντηθεί όλα τα βήματα. Λείπουν: {', '.join(missing)}")
     else:
         st.session_state.submitted = True
+
+    missing = [k for k in required_keys if k not in st.session_state.answers]
+
+    if missing:
+        st.error(f"Δεν έχουν απαντηθεί όλα τα βήματα. Λείπουν: {', '.join(missing)}")
+    else:
+        st.session_state.submitted = True
 # ---------- Results (premium card + top-3 cards) ----------
 if st.session_state.submitted:
    best, ranked, scores = compute_result()
