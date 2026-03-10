@@ -236,9 +236,9 @@ if st.session_state.submitted:
         st.markdown(f"## {product['model']}")
         st.markdown(f"**Τιμή:** {product['price']}")
         st.write(product["desc"])
-        st.link_button("Δες το προϊόν", product["link"])
+        st.link_button("Δείτε το προϊόν", product["link"])
 
-        st.write("**Γιατί σου ταιριάζει:**")
+        st.write("**Γιατί σας ταιριάζει:**")
         st.markdown("".join([f"<span class='chip'>{c}</span>" for c in chips]), unsafe_allow_html=True)
 
         st.write("")
@@ -247,18 +247,7 @@ if st.session_state.submitted:
     st.markdown("</div>", unsafe_allow_html=True)
 
     st.write("")
-    st.subheader("Top-3 προτάσεις")
-    top3 = ranked[:3]
-    cols = st.columns(3)
-    for i, (name, sc) in enumerate(top3):
-        p = RESULTS[name]
-        with cols[i]:
-            st.markdown('<div class="card">', unsafe_allow_html=True)
-            st.image(p["image"], use_container_width=True)
-            st.markdown(f"<div class='card-title'>{p['model']}</div>", unsafe_allow_html=True)
-            st.markdown(f"<div class='card-sub'>{p['price']} • score {sc}</div>", unsafe_allow_html=True)
-            st.markdown("</div>", unsafe_allow_html=True)
-
+    
     with st.expander("🔎 Debug: Απαντήσεις & Σκορ (για έλεγχο αντιστοίχισης)"):
         st.write("### Επιλογές χρήστη")
         for k, v in st.session_state.answers.items():
