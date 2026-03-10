@@ -356,7 +356,7 @@ if st.session_state.submitted:
         st.write(product["desc"])
 
         if chips:
-            st.write("**Γιατί σου ταιριάζει:**")
+            st.write("**Γιατί σας ταιριάζει:**")
             st.markdown(
                 "".join([f"<span class='chip'>{chip}</span>" for chip in chips]),
                 unsafe_allow_html=True
@@ -365,7 +365,7 @@ if st.session_state.submitted:
         st.caption(f"Match score: {scores[best]}")
 
         if "link" in product and product["link"]:
-            st.link_button("Δες το προϊόν", product["link"])
+            st.link_button("Δείτε το προϊόν", product["link"])
 
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -378,4 +378,4 @@ if st.session_state.submitted:
         st.write(scores)
 
     st.write("")
-    st.button("🔁 Ξανακάνε το quiz", on_click=reset)
+    st.button("🔁 Ξανακάνετε το quiz", on_click=reset)
