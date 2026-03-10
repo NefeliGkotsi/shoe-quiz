@@ -91,7 +91,7 @@ RESULTS = {
         "model": "Αθλητικό Sneaker",
         "price": "89.95€",
         "desc": "Άνετο sneaker για κίνηση και δραστήρια καθημερινότητα.",
-        "link": "https://www.massimodutti.com/gr/contrast-leather-trainers-l11300750?pelement=56717435"
+        "link": "https://www.massimodutti.com/gr/split-leather-trainers-with-piece-details-l11305750?pelement=57220497"
     }
 }
 
