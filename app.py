@@ -156,12 +156,23 @@ def add_scores(scores, deltas):
 
 def compute_result():
     scores = {p: 0 for p in PROFILES}
-    for k in ["style", "use", "priority", "colors", "material", "shape"]:
+
+    required_keys = ["style", "use", "priority", "colors", "material", "shape"]
+
+    for k in required_keys:
+        if k not in st.session_state.answers:
+            st.error(f"Λείπει απάντηση για: {k}")
+            return None, None, None
+
+        if "scores" not in st.session_state.answers[k]:
+            st.error(f"Λείπουν τα scores για: {k}")
+            return None, None, None
+
         add_scores(scores, st.session_state.answers[k]["scores"])
+
     ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
     best = ranked[0][0]
     return best, ranked, scores
-
 def chips_from_answers():
     # “Γιατί σου ταιριάζει” chips από τις επιλογές του χρήστη
     chips = []
@@ -226,8 +237,12 @@ if not st.session_state.submitted:
 
 # ---------- Results (premium card + top-3 cards) ----------
 if st.session_state.submitted:
-    best, ranked, scores = compute_result()
-    product = RESULTS[best]
+   best, ranked, scores = compute_result()
+
+if best is None:
+    st.stop()
+
+product = RESULTS[best]
     chips = chips_from_answers()
 
     st.subheader("Αποτέλεσμα")
