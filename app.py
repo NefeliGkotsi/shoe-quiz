@@ -212,22 +212,28 @@ def chips_from_answers():
 def step_ui(key, title, question, options, score_map, horizontal=False):
     st.subheader(title)
 
-    prev = st.session_state.answers.get(key, {}).get("choice", None)
-    idx = options.index(prev) if prev in options else None
+    ui_key = f"ui_{key}"
 
-    choice = st.radio(
+    prev = st.session_state.answers.get(key, {}).get("choice", None)
+
+    if ui_key not in st.session_state:
+        st.session_state[ui_key] = prev
+
+    st.radio(
         question,
         options,
-        index=idx,
+        index=options.index(st.session_state[ui_key]) if st.session_state[ui_key] in options else None,
         horizontal=horizontal,
-        key=f"ui_{key}"
+        key=ui_key
     )
+
+    choice = st.session_state.get(ui_key, None)
 
     if choice is not None and choice in score_map:
         st.session_state.answers[key] = {
             "choice": choice,
             "scores": score_map[choice]
-    }
+        }
 # -----------------------------
 # Progress / navigation
 # -----------------------------
