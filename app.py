@@ -320,8 +320,22 @@ if not st.session_state.submitted:
 
     with nav1:
         if st.session_state.step < 6:
-            if st.button("➡️ Επόμενο"):
-                st.session_state.step += 1
+           if st.button("➡️ Επόμενο"):
+    current_keys = {
+        1: "style",
+        2: "use",
+        3: "priority",
+        4: "colors",
+        5: "material",
+        6: "shape"
+    }
+
+    current_key = current_keys[st.session_state.step]
+
+    if current_key not in st.session_state.answers:
+        st.error("Πρέπει πρώτα να επιλέξετε μία απάντηση.")
+    else:
+        st.session_state.step += 1
         else:
             if st.button("✅ Δες αποτέλεσμα"):
                 required_keys = ["style", "use", "priority", "colors", "material", "shape"]
