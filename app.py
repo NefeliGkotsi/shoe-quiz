@@ -228,7 +228,6 @@ def step_ui(key, title, question, options, score_map, horizontal=False):
         "choice": choice,
         "scores": score_map[choice]
     }
-
 # -----------------------------
 # Progress / navigation
 # -----------------------------
