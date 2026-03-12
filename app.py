@@ -213,7 +213,7 @@ def step_ui(key, title, question, options, score_map, horizontal=False):
     st.subheader(title)
 
     prev = st.session_state.answers.get(key, {}).get("choice", None)
-    idx = options.index(prev) if prev in options else 0
+    idx = options.index(prev) if prev in options else None
 
     choice = st.radio(
         question,
