@@ -223,13 +223,11 @@ def step_ui(key, title, question, options, score_map, horizontal=False):
         key=f"ui_{key}"
     )
 
-    if choice in score_map:
-        st.session_state.answers[key] = {
-            "choice": choice,
-            "scores": score_map[choice]
-        }
-    else:
-        st.error(f"Η επιλογή '{choice}' δεν υπάρχει στο map της ερώτησης '{key}'.")
+    if choice is not None and choice in score_map:
+    st.session_state.answers[key] = {
+        "choice": choice,
+        "scores": score_map[choice]
+    }
 
 # -----------------------------
 # Progress / navigation
