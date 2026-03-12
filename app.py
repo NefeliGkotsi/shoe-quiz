@@ -224,9 +224,9 @@ def step_ui(key, title, question, options, score_map, horizontal=False):
     )
 
     if choice is not None and choice in score_map:
-    st.session_state.answers[key] = {
-        "choice": choice,
-        "scores": score_map[choice]
+        st.session_state.answers[key] = {
+            "choice": choice,
+            "scores": score_map[choice]
     }
 # -----------------------------
 # Progress / navigation
